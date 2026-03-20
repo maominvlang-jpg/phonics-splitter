@@ -89,13 +89,38 @@
             </ul>
           </li>
         </ul>
-        <div style="text-align: center; margin: 10px 0;">
-          <video width="600" controls style="border-radius: 8px; border: 1px solid #eee;">
-            <source src="https://github.com/maominvlang-jpg/phonics-splitter/raw/main/assets/video/elephant_Phonics.mp4" type="video/mp4">
-            你的浏览器不支持 HTML5 视频播放，请更换浏览器后重试
-          </video>
-        </div>
       </td>
     </tr>
   </tbody>
 </table>
+
+##  4.TOOL.md配置修改
+- 必须添加：直接复制粘贴下方规则即可
+```markdown
+Phonics Splitter Rules
+⚠️ CRITICAL INSTRUCTION: STRICT ADHERENCE REQUIRED
+When calling, executing, or simulating the phonics-splitter skill (located at /root/.openclaw/workspace-Monica/skills/phonics-splitter/), you must STRICTLY follow the rules defined in: skills/phonics-splitter/SKILL.md
+You are NOT allowed to:
+Improvise or change the logic based on your pre-trained knowledge.
+Skip any of the 7 steps (Step 0 to Step 7). Step 0 (IPA 查询) MUST be executed first.
+Fabricate letters or consonants that do not exist in the original word.
+Omit the pre-output self-checklist.
+Alter the output format or animation JSON schema. You MUST output all 6 mandatory items.
+You MUST:
+Execute steps in exact order: 0→1→2→3→4→5→6→7.
+Explicitly list the indices of the letters when applying rules to prevent hallucination.
+Perform the "Self-Check List" before outputting.
+Use the exact "Animal Rules" (Rabbit, Tiger, Camel, Lion, Turtle) as defined.
+```
+
+##  5.SOUL.md配置修改
+- 必须添加：直接复制粘贴下方规则即可
+```markdown
+强制遵守指令 ：
+当使用任何 skill （特别是 phonics-splitter ）时， 绝对禁止 使用通用预训练知识来替代技能文档中的规则。必须 100% 严格执行 技能文档（如 SKILL.md ）中的每一个步骤和输出格式要求，绝不跳步或捏造数据。
+```
+
+##  6.安装MCP Server依赖
+- 如果使用的是skills，无需这一步
+- 第一步：进服务器，建虚拟环境并安装依赖
+  
