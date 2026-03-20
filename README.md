@@ -52,7 +52,7 @@
       <td><strong>拆分准确性</strong></td>
       <td colspan="2">
         - 工具：MCP Server > skills<br>
-        - 模型：Claude-Sonnet4.6 > gpt-oss-120b
+        - 模型：Claude-Sonnet4.6 > gpt-oss-120b （其他模型没有尝试过，可自行尝试）
       </td>
     </tr>
     <tr>
@@ -186,12 +186,7 @@ Use the exact "Animal Rules" (Rabbit, Tiger, Camel, Lion, Turtle) as defined.
       "mcpServers": {
         "phonics-splitter": {
           "command": "/root/phonics-env/bin/python3",
-          "args": ["/root/.openclaw/workspace-Monica/skills/phonics-splitter/scripts/mcp_server.py"],
-          "env": {
-            "API_KEY": "sk-........(你的API_KEY)",
-            "HTTPS_PROXY": "http://你的代理IP:端口",         
-            "HTTP_PROXY": "http://你的代理IP:端口"
-          }
+          "args": ["/root/.openclaw/workspace-Monica/skills/phonics-splitter/scripts/mcp_server.py"]
         }
       }
     }
