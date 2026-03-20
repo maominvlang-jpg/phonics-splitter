@@ -119,8 +119,47 @@ Use the exact "Animal Rules" (Rabbit, Tiger, Camel, Lion, Turtle) as defined.
 强制遵守指令 ：
 当使用任何 skill （特别是 phonics-splitter ）时， 绝对禁止 使用通用预训练知识来替代技能文档中的规则。必须 100% 严格执行 技能文档（如 SKILL.md ）中的每一个步骤和输出格式要求，绝不跳步或捏造数据。
 ```
+##  6.本地终端环境配置
+- 不想生成视频的话，以下步骤都可以省略
+- 第一步：安装 Homebrew（如果没有）
+  ```markdown
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ``` 
+- 第二步：安装 ffmpeg
+  ```markdown
+  brew install ffmpeg
+  ``` 
+- 第三步：在虚拟环境中安装 Python 依赖
+  ```markdown
+  # （1）：创建虚拟环境（只需做一次）
+  python3 -m venv ~/phonics-env
 
-##  6.安装MCP Server依赖
+  # （2）：激活虚拟环境
+  source ~/phonics-env/bin/activate
+
+  # （3）：安装依赖（激活后 pip 就可以直接用了）
+  pip install manim edge-tts requests pillow
+  激活成功后，终端最左边会出现 `(phonics-env)` 的前缀，之后每次打开终端想用的时候，重新执行第二步激活一下就好。
+  ```
+- 第四步：验证安装
+  ```markdown
+  #正常应该输出版本号
+  pip3 show manim 
+  manim --version
+  ``` 
+  
+##  7.本地终端环境配置  
+- 激活虚拟环境——>复制粘贴openclw输出的「本地渲染指引」——>回车等待视频生成
+- 到终端给的地址里找生成的视频
+- 
+  <img width="580" height="545" alt="image" src="https://github.com/user-attachments/assets/a6d5d44c-5267-4b94-a5f5-7bfe47cf2621" />
+  <img width="580" height="497" alt="image" src="https://github.com/user-attachments/assets/03a38856-c13c-4e87-832d-6707ca1c10d4" />
+  <img width="580" height="497" alt="image" src="https://github.com/user-attachments/assets/ab28c66b-3504-4910-8602-0e563bfafe5f" />
+
+##  8.安装MCP Server依赖
 - 如果使用的是skills，无需这一步
 - 第一步：进服务器，建虚拟环境并安装依赖
-  
+- 第二步：确认路径正确
+- 第三步：验证 MCP Server 能否正常启动
+- 第四步：配置到openclaw
+- 第五步：重启 OpenClaw
