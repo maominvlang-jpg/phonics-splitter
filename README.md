@@ -69,5 +69,33 @@
         <img width="428" height="622" alt="image" src="https://github.com/user-attachments/assets/a7254b0c-ea3b-4bda-9dde-eb03be7fa073" />
         <img width="583" height="613" alt="image" src="https://github.com/user-attachments/assets/d9126f16-e643-4ada-80d8-65483922b14d" />
     </tr>
+    <tr>
+      <td><strong>生成的视频质量</strong></td>
+      <td colspan="2">
+        <ul>
+          <li>音视频同步的准确性：编译器 > 本地终端
+            <ul style="list-style-type: circle; margin-left: 20px;">
+              <li>原因：
+                <ul style="list-style-type: square; margin-left: 20px;">
+                  <li>部分单词在本地渲染时无法获取到对应的图片；</li>
+                  <li>本地终端视频的 ffmpeg 时序计算不够精准——音频偏移量是按固定时间估算的，和实际动画帧数有出入。</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>视频的精美程度：本地终端 > 编译器
+            <ul style="list-style-type: circle; margin-left: 20px;">
+              <li>（暂时没搞懂为什么）</li>
+            </ul>
+          </li>
+        </ul>
+        <div style="text-align: center; margin: 10px 0;">
+          <video width="600" controls style="border-radius: 8px; border: 1px solid #eee;">
+            <source src="https://github.com/你的用户名/你的仓库名/raw/main/assets/video/你的视频文件名.mp4" type="video/mp4">
+            你的浏览器不支持 HTML5 视频播放，请更换浏览器后重试
+          </video>
+        </div>
+      </td>
+    </tr>
   </tbody>
 </table>
