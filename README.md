@@ -91,7 +91,7 @@
         </ul>
         <div style="text-align: center; margin: 10px 0;">
           <video width="600" controls style="border-radius: 8px; border: 1px solid #eee;">
-            <source src="https://github.com/你的用户名/你的仓库名/raw/main/assets/video/你的视频文件名.mp4" type="video/mp4">
+            <source src="https://github.com/maominvlang-jpg/phonics-splitter/raw/main/assets/video/elephant_Phonics.mp4" type="video/mp4">
             你的浏览器不支持 HTML5 视频播放，请更换浏览器后重试
           </video>
         </div>
