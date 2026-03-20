@@ -65,7 +65,7 @@
     <tr>
       <td><strong>openclaw 输出的拆解过程</strong></td>
       <td colspan="2">
-        <img width="614" height="606" alt="image" src="https://github.com/user-attachments/assets/430e9858-7136-4f3a-82c0-ddbe6bb3c647" />
+        <img width="614" height="606" alt="image" src="https://github.com/user-attachments/assets/2d9650db-97c9-424f-9239-3b489dea90dc" />
         <img width="428" height="622" alt="image" src="https://github.com/user-attachments/assets/a7254b0c-ea3b-4bda-9dde-eb03be7fa073" />
         <img width="583" height="613" alt="image" src="https://github.com/user-attachments/assets/d9126f16-e643-4ada-80d8-65483922b14d" />
     </tr>
