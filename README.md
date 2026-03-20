@@ -159,7 +159,46 @@ Use the exact "Animal Rules" (Rabbit, Tiger, Camel, Lion, Turtle) as defined.
 ##  8.安装MCP Server依赖
 - 如果使用的是skills，无需这一步
 - 第一步：进服务器，建虚拟环境并安装依赖
+  ```markdown
+  python3 -m venv ~/phonics-env
+  source ~/phonics-env/bin/activate
+  pip install mcp anthropic
+  ``` 
 - 第二步：确认路径正确
+  ```markdown
+  which python3
+  # 应该输出：/root/phonics-env/bin/python3
+  ``` 
 - 第三步：验证 MCP Server 能否正常启动
+  ```markdown
+  /root/phonics-env/bin/python3 /root/.openclaw/workspace-Monica/skills/phonics-splitter/scripts/mcp_server.py
+  ``` 
 - 第四步：配置到openclaw
+  - 在openclaw.json文件中，找到你需要使用的Agent的 agents.list ，加一个 mcpServers 字段；
+  - Monica是我的机器人的名字，工作区间和和路径替换成你自己的就可以了；
+  - API_KEY的值也替换成你自己的；
+    ```markdown
+    {
+      "id": "monica",
+      "name": "Monica",
+      "workspace": "/root/.openclaw/workspace-Monica",
+      "agentDir": "/root/.openclaw/agents/monica/agent",
+      "mcpServers": {
+        "phonics-splitter": {
+          "command": "/root/phonics-env/bin/python3",
+          "args": ["/root/.openclaw/workspace-Monica/skills/phonics-splitter/scripts/mcp_server.py"],
+          "env": {
+            "API_KEY": "sk-........(你的API_KEY)",
+            "HTTPS_PROXY": "http://你的代理IP:端口",         
+            "HTTP_PROXY": "http://你的代理IP:端口"
+          }
+        }
+      }
+    }
+  ``` 
 - 第五步：重启 OpenClaw
+  ```markdown
+  openclaw gateway restart
+  #重启后要是报错，那就执行，然后再次重启
+  openclaw doctor --fix
+  ``` 
